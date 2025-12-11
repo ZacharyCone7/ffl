@@ -62,7 +62,7 @@ recommendation['flex'] = fuzz.trimf(recommendation.universe, [20, 50, 80])
 recommendation['start'] = fuzz.trimf(recommendation.universe, [60, 100, 100])
 
 # --- 1.4 Define Fuzzy Rules (Rule Base) ---
-# A simplified set of 12 rules (out of 3^4 = 81 potential rules) focusing on common scenarios.
+# A simplified set of 19 rules (out of 3^4 = 81 potential rules) focusing on common scenarios.
 # The use of the Mamdani MIN-MAX method for aggregation ensures high interpretability.
 
 rule1 = ctrl.Rule(

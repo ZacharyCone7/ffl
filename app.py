@@ -5,8 +5,8 @@ from fuzzy_data_manager import run_fuzzy_analysis # import fuzzy logic execution
 app = Flask(__name__)
 
 # --- Configuration (Hard set the current NFL season details) ---
-CURRENT_YEAR = 2023
-CURRENT_WEEK = 12
+CURRENT_YEAR = 2025
+CURRENT_WEEK = 14
 
 
 # Route to handle the AJAX POST request from the HTML form
@@ -30,7 +30,7 @@ def analyze_player():
 
     try:
         # 2. Call the Fuzzy Logic Function
-        result_data = run_fuzzy_analysis(player_input, year, week)
+        result_data = run_fuzzy_analysis(player_input, CURRENT_YEAR, CURRENT_WEEK)
 
         # 3. Handle case where run_fuzzy_analysis couldn't find data
         if isinstance(result_data, str) and "Analysis failed" in result_data:
